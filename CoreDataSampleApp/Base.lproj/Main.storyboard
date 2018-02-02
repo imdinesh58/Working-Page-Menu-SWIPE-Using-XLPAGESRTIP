@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxS-bI-C00">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Child Example View Controller-->
+        <scene sceneID="u9P-En-u1V">
+            <objects>
+                <viewController storyboardIdentifier="child1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PYr-rZ-XXN" customClass="ChildExampleViewController" customModule="CoreDataSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btV-0C-58z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="mt1-FB-cTc"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="584-mT-cZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="-885"/>
+        </scene>
+        <!--Table Child Example View Controller-->
+        <scene sceneID="Gc3-0y-shS">
+            <objects>
+                <viewController storyboardIdentifier="child2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XZt-Oc-5fr" customClass="TableChildExampleViewController" customModule="CoreDataSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svu-dX-WQI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="e85-o7-q9i"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ma-kV-P1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="-885"/>
+        </scene>
+        <!--ACTIVITY-->
+        <scene sceneID="fbK-Oy-6mF">
+            <objects>
+                <viewController id="fxS-bI-C00" customClass="ViewController2" customModule="CoreDataSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HYu-Yi-mT1"/>
+                        <viewControllerLayoutGuide type="bottom" id="iYT-X7-Uja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4OM-YN-s6s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iFJ-2S-14f" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="20" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="gZK-Pv-nXz"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sqZ-ER-fVF">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSK-Ue-8cx">
+                                <rect key="frame" x="0.0" y="84" width="320" height="396"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iFJ-2S-14f" firstAttribute="leading" secondItem="4OM-YN-s6s" secondAttribute="leading" id="1aD-WL-aMX"/>
+                            <constraint firstItem="iFJ-2S-14f" firstAttribute="top" secondItem="HYu-Yi-mT1" secondAttribute="bottom" id="AFI-DI-NIv"/>
+                            <constraint firstAttribute="trailing" secondItem="iFJ-2S-14f" secondAttribute="trailing" id="Yff-hG-bqp"/>
+                            <constraint firstAttribute="trailing" secondItem="OSK-Ue-8cx" secondAttribute="trailing" id="ZoZ-fN-iBd"/>
+                            <constraint firstItem="iYT-X7-Uja" firstAttribute="top" secondItem="OSK-Ue-8cx" secondAttribute="bottom" id="b03-dC-Nso"/>
+                            <constraint firstItem="OSK-Ue-8cx" firstAttribute="top" secondItem="iFJ-2S-14f" secondAttribute="bottom" id="ec2-Zu-52a"/>
+                            <constraint firstItem="OSK-Ue-8cx" firstAttribute="leading" secondItem="4OM-YN-s6s" secondAttribute="leading" id="iQx-dt-JbT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GxX-rP-6dc"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ACTIVITY" id="Q5F-XV-BDi"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="iFJ-2S-14f" id="o7L-Vn-DXk"/>
+                        <outlet property="containerView" destination="OSK-Ue-8cx" id="DE2-xI-Mx8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9B-yq-pIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="-885"/>
+        </scene>
+    </scenes>
+</document>
